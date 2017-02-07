@@ -2,3 +2,5 @@
 .idea
 .gitignore
 out/
+target/
+/MammothAutomation.iml

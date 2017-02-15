@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import static configurations.FirefoxSettings.driver;
 
 /**
- * Created by stevenstretton on 01/02/2017.
+ * Created by stevenstretton on 20/02/2017.
  */
 public class Navbar {
 
@@ -46,6 +46,4 @@ public class Navbar {
 
         navAccount.click();
     }
-
-
 }

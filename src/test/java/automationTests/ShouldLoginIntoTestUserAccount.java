@@ -17,7 +17,7 @@ public class ShouldLoginIntoTestUserAccount extends Login{
         automationSetup.goToDefaultPage();
 
         addDetails(
-                "test@email.com",
+                "test@mail.com",
                 "qa_automation"
         );
 

@@ -1,6 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/
+.idea/workspace.xml
 .gitignore
 out/
 target/
 /MammothAutomation.iml
+src/main/.DS_Store
+src/main/java/.DS_Store

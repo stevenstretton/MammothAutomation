@@ -23,8 +23,7 @@ public class Signup {
 
     public void selectCreateAccountButton()
     {
-        WebElement createAccount = driver.findElement(By.cssSelector(".button.button-md.button-default" +
-                ".button-default-md.button-block.button-block-md"));
+        WebElement createAccount = driver.findElement(By.id("createAccount"));
 
         createAccount.click();
     }

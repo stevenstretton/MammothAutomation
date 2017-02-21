@@ -23,7 +23,8 @@ public class Signup {
 
     public void selectCreateAccountButton()
     {
-        WebElement createAccount = driver.findElement(By.id("createAccount"));
+        WebElement createAccount = driver.findElement(By.xpath("html/body/ion-app/ng-component/ion-nav/page-register" +
+                "/ion-content/div[2]/form/ion-list/div/button"));
 
         createAccount.click();
     }

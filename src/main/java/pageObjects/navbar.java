@@ -8,7 +8,7 @@ import static configurations.FirefoxSettings.driver;
 /**
  * Created by stevenstretton on 20/02/2017.
  */
-public class Navbar {
+public class NavBar {
 
     public void selectMyTrips()
     {
@@ -27,7 +27,7 @@ public class Navbar {
 
     public void selectNewTrips()
     {
-        WebElement navNewTrips = driver.findElement(By.cssSelector("#tab-t0-2"));
+        WebElement navNewTrips = driver.findElement(By.id("tab-t0-2"));
 
         navNewTrips.click();
     }

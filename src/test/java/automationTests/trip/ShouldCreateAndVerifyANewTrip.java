@@ -26,6 +26,8 @@ public class ShouldCreateAndVerifyANewTrip extends Login{
                 "qa_automation"
         );
 
+        Thread.sleep(1000);
+
         selectLoginButton();
 
         Thread.sleep(1000);
@@ -37,9 +39,6 @@ public class ShouldCreateAndVerifyANewTrip extends Login{
         newTrip.name("Holiday to New York");
         newTrip.location("New York, USA");
         newTrip.description("Were going to New York for a few days");
-        newTrip.startDate();
-        newTrip.startTime();
-        newTrip.endDate();
         newTrip.transport("Flight");
         newTrip.friends();
         newTrip.addItem("Passport", "Make sure you have your passport ready!");

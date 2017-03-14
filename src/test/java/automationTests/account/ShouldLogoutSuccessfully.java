@@ -2,15 +2,20 @@ package automationTests.account;
 
 import configurations.AutomationSetup;
 import org.junit.Test;
+import pageObjects.Account;
 import pageObjects.Login;
+import pageObjects.NavBar;
 
 /**
  * Created by stevenstretton on 01/02/2017.
  */
-public class ShouldLoginIntoTestUserAccount extends Login{
+public class ShouldLogoutSuccessfully extends Login{
+
+    private NavBar navBar = new NavBar();
+    private Account account = new Account();
 
     @Test
-    public void shouldLoginIntoTestUserAccount() throws InterruptedException
+    public void shouldLogoutSuccessfully() throws InterruptedException
     {
         AutomationSetup automationSetup = new AutomationSetup();
         automationSetup.executeInitialisationSettings();
@@ -26,6 +31,12 @@ public class ShouldLoginIntoTestUserAccount extends Login{
         selectLoginButton();
 
         Thread.sleep(1000);
+
+        navBar.selectAccount();
+
+        Thread.sleep(1000);
+
+        account.logoutAndValidate();
 
         automationSetup.endOfAutomationTest();
 

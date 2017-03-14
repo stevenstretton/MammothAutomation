@@ -92,32 +92,37 @@ public class NewTrip {
         tripTransportBox.sendKeys(tripTransport);
     }
 
-    public void friends(){
+    public void friends() throws InterruptedException {
         WebElement tripViewBtn = driver.findElement(By.xpath(".//*[@id='tabpanel-t0-2']/page-newtrip/ion-content" +
         "/div[2]/ion-list[1]/ion-item/div[1]/button"));
 
         tripViewBtn.click();
 
-        WebElement doneBtn = driver.findElement(By.xpath("html/body/ion-app/ion-modal/div/page-friendsmodal" +
-                "/ion-header/ion-toolbar/ion-buttons/button"));
+        WebElement backdrop = driver.findElement(By.xpath("html/body/ion-app/ion-modal/ion-backdrop"));
 
-        WebElement georgeCheckBox = driver.findElement(By.id("chk-19-0"));
-        WebElement timCheckBox = driver.findElement(By.id("chk-20-0"));
+        Thread.sleep(1000);
 
-        georgeCheckBox.click();
-        timCheckBox.click();
+        WebElement firstCheckBox = driver.findElement(By.xpath("html/body/ion-app/ion-modal/div/page-friendsmodal" +
+                "/ion-content/div[2]/ion-list/ion-item[1]/div/ion-checkbox"));
+        WebElement secondCheckBox = driver.findElement(By.xpath("html/body/ion-app/ion-modal/div/page-friendsmodal" +
+                "/ion-content/div[2]/ion-list/ion-item[2]/div/ion-checkbox"));
 
-        doneBtn.click();
+        firstCheckBox.click();
+        secondCheckBox.click();
+
+        backdrop.click();
 
     }
 
-    public void addItem(String tripItem, String tripDescription){
+    public void addItem(String tripItem, String tripDescription) throws InterruptedException {
 
         item(tripItem);
         shortDescription(tripDescription);
 
         WebElement addItemBtn = driver.findElement(By.xpath(".//*[@id='tabpanel-t0-2']/page-newtrip/ion-content" +
                 "/div[2]/ion-list[2]/div/button"));
+
+        Thread.sleep(1000);
 
         addItemBtn.click();
     }

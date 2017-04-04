@@ -10,13 +10,6 @@ import static configurations.FirefoxSettings.driver;
  */
 public class People {
 
-    public boolean validateImageIsDisplayed()
-    {
-        WebElement image = driver.findElement(By.xpath("html/body/ion-app/ion-modal/div/page-addfriendmodal" +
-                "/ion-content/div[2]/ion-list/ion-item[1]/ion-avatar/img"));
-
-        return image != null;
-    }
 
     public void selectAddFriends()
     {
@@ -25,4 +18,27 @@ public class People {
 
         addFriend.click();
     }
+
+    public void selectPJ()
+    {
+        WebElement addJohnDoe = driver.findElement(By.cssSelector("ion-item:nth-child(2)"));
+        addJohnDoe.click();
+    }
+
+    public boolean validateImageIsDisplayed()
+    {
+        WebElement image = driver.findElement(By.xpath("html/body/ion-app/ion-modal/div/page-addfriendmodal" +
+                "/ion-content/div[2]/ion-list/ion-item[1]/ion-avatar/img"));
+
+        return image != null;
+    }
+
+
+    public boolean validateFriend(String friendName)
+    {
+        WebElement friend = driver.findElement(By.xpath("//*[contains(text(),'" + friendName + "')]"));
+
+        return friend != null;
+    }
+
 }

@@ -4,6 +4,8 @@ import configurations.AutomationSetup;
 import org.junit.Test;
 import pageObjects.*;
 
+import static library.Accounts.ACCOUNT_TIM;
+
 /**
  * Created by stevenstretton on 01/02/2017.
  */
@@ -22,8 +24,8 @@ public class ShouldVerifyMapAndLocationAreDisplayed extends Login{
         automationSetup.goToDefaultPage();
 
         addDetails(
-                "a@a.com",
-                "password"
+                ACCOUNT_TIM.getAccountEmail(),
+                ACCOUNT_TIM.getAccountPassword()
         );
 
         Thread.sleep(1000);
@@ -41,6 +43,10 @@ public class ShouldVerifyMapAndLocationAreDisplayed extends Login{
         Thread.sleep(1000);
 
         viewTrip.goToMapView();
+
+        Thread.sleep(1000);
+
+        map.selectStaticButton();
 
         Thread.sleep(1000);
 

@@ -6,6 +6,8 @@ import pageObjects.Account;
 import pageObjects.Login;
 import pageObjects.NavBar;
 
+import static library.Accounts.ACCOUNT_TIM;
+
 /**
  * Created by stevenstretton on 01/02/2017.
  */
@@ -22,8 +24,8 @@ public class ShouldLogoutSuccessfully extends Login{
         automationSetup.goToDefaultPage();
 
         addDetails(
-                "a@a.com",
-                "password"
+                ACCOUNT_TIM.getAccountEmail(),
+                ACCOUNT_TIM.getAccountPassword()
         );
 
         Thread.sleep(1000);

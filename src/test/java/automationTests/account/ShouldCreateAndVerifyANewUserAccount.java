@@ -5,6 +5,8 @@ import org.junit.Test;
 import pageObjects.Login;
 import pageObjects.Signup;
 
+import static library.Accounts.ACCOUNT_TEST;
+
 /**
  * Created by stevenstretton on 01/02/2017.
  */
@@ -37,8 +39,8 @@ public class ShouldCreateAndVerifyANewUserAccount extends Login {
         automationSetup.goToDefaultPage();
 
         addDetails(
-                "test@mail.com",
-                "qa_automation"
+                ACCOUNT_TEST.getAccountEmail(),
+                ACCOUNT_TEST.getAccountPassword()
         );
 
         Thread.sleep(1000);

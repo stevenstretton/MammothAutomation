@@ -12,12 +12,28 @@ public class Friends {
 
     private People people = new People();
 
-    public void addFriend()
-    {
+    public void addFriend() throws InterruptedException {
         selectAddFriends();
+        Thread.sleep(1000);
         people.validateImageIsDisplayed();
         people.selectAddFriends();
     }
+
+    public void validateAndAddPJ(String name) throws InterruptedException {
+        selectAddFriends();
+        Thread.sleep(1000);
+        people.validateFriend(name);
+        people.selectPJ();
+        selectBackdrop();
+    }
+
+    public boolean isUserOnList(String friendName)
+    {
+        WebElement checkUser = driver.findElement(By.xpath("//*[contains(text(),'" + friendName + "')]"));
+
+        return checkUser != null;
+    }
+
 
     private void selectAddFriends()
     {
@@ -26,4 +42,12 @@ public class Friends {
 
         addFriend.click();
     }
+
+    private void selectBackdrop()
+    {
+        WebElement backdrop = driver.findElement(By.cssSelector(".show-page>ion-backdrop"));
+
+        backdrop.click();
+    }
+
 }

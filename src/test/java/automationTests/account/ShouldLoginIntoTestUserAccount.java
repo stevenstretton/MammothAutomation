@@ -1,8 +1,10 @@
-package automationTests;
+package automationTests.account;
 
 import configurations.AutomationSetup;
 import org.junit.Test;
 import pageObjects.Login;
+
+import static library.Accounts.ACCOUNT_TIM;
 
 /**
  * Created by stevenstretton on 01/02/2017.
@@ -17,8 +19,8 @@ public class ShouldLoginIntoTestUserAccount extends Login{
         automationSetup.goToDefaultPage();
 
         addDetails(
-                "test@mail.com",
-                "qa_automation"
+                ACCOUNT_TIM.getAccountEmail(),
+                ACCOUNT_TIM.getAccountPassword()
         );
 
         Thread.sleep(1000);

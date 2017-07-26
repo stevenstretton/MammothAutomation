@@ -4,7 +4,7 @@ Welcome to Mammoth Automation Test
 
 So lets begin...
 ```
-$ git clone https://mobileapplicationdevelopmen@bitbucket.org/mobileapplicationdevelopmen/mammothautomation.git/wiki
+$ git clone git@github.com:stevenstretton/MammothAutomation.git
 ```
 
 To execute (example of a test):
